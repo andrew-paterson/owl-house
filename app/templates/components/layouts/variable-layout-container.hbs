@@ -1,0 +1,13 @@
+{{#if authenticated}}
+	{{#layouts/private/outer-wrapper class=classes}}
+	  	{{#layouts/content-wrapper title=title}}
+	  		{{component authenticatedContent}}
+	 	{{/layouts/content-wrapper}}
+	{{/layouts/private/outer-wrapper}}
+{{else}}
+	{{#layouts/public/outer-wrapper}}
+		{{#layouts/content-wrapper title=title}}
+			{{component publicContent}}
+		{{/layouts/content-wrapper}}
+	{{/layouts/public/outer-wrapper}}
+{{/if}}

@@ -1,0 +1,8 @@
+{{custom-elements/css-popout-toggler popoutBoxName=windmill onHover=true class=artefactMetaTitle}}
+{{#custom-elements/css-popout-box popoutBoxName=windmill class=artefactMetaTitle}}
+  <h3>{{title}}</h3>
+  <img src="{{thumbnailPath}}" alt="artefactMetaTitle" class='artefact-thumbnail'>
+  <div class="clr"></div>
+  {{yield}}
+  {{#link-to 'artefacts' (query-params artefact=artefactMetaTitle) class='read-more'}}Read more{{/link-to}}
+{{/custom-elements/css-popout-box}}

@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:800);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,300i,600);
+
+@import "_mixins-and-variables/variables-bits-and-pieces";
+@import "_mixins-and-variables/variables-layout";
+@import "_mixins-and-variables/variables-colour-definitions";
+@import "_mixins-and-variables/mixins";
+
+@import "layout/general-ui";
+@import "layout/private-ui";
+@import "layout/public-ui";
+@import "layout/main-nav";
+@import "layout/user-greeting";
+@import "layout/system-messages";
+
+@import "generic/bits-and-pieces";
+@import "generic/perfect-scrollbar-overrides";
+@import "generic/box-arrows";
+@import "generic/spinning-cog";
+@import "generic/block-row";
+@import "generic/page-loading-graphic";
+@import "generic/svg-specific";
+@import "generic/filtered-paginated-table";
+
+@import "custom-elements/css-popout-box";
+@import "custom-elements/form-field-input";
+@import "custom-elements/animated-accordion";
+@import "custom-elements/confirm-cancel-popout";
+@import "custom-elements/in-page-alert";
+@import "custom-elements/info-popouts";
+@import "custom-elements/searchable-select-list";
+
+@import "route-specific/index";
+
+/*
+Way to remove all not customer production accounts from users table.
+Way to set accounts to rejected.
+Put list of email addresses for the types of user lists into a separate file.
+To approve a user from the frontend: get request to "/users/activate/activation-key"
+-----------------
+TOOL OPTIONS
+-----------------
+
+HYRAX API TODOS
+Need job fields for total data size, resistance algorithm name and pathogen.
+
+
+BUGS
+Jobs table
+
+Changing from order by date to alpha or reverse does nothing.
+
+*/
+
+//TODO Who's logged in- external users only.
+//Add prevalence to jobs table.

@@ -1,0 +1,57 @@
+// div.pop-up-box {
+// 	width: 100%;
+//   max-width: 400px;
+// }
+
+div.pop-up-box.closed {
+	display: none;
+}
+
+div.pop-up-box.open {
+	display: block;
+}
+
+div.pop-up-box-inner {
+	padding: 15px;
+	background: #fff;
+	.box-shadow-bottom-right;
+	border: 1px solid #bbb;
+	border-radius: @button-border-radius;
+    -moz-border-radius: @button-border-radius;
+    -webkit-border-radius: @button-border-radius;
+    position: relative;
+}
+
+div.pop-up-box-inner.hyrax-red {
+	border-color: @hyrax-red-two;
+}
+
+div.pop-up-box-inner.exatype-blue {
+	border-color: @admin-console-colour-three;
+}
+
+div.close-button {
+	width: 24px;
+	height: 24px;
+	border-radius: 30px;
+}
+div.close-button svg {
+	max-height: 13px;
+	fill: #bbb;
+	margin-top: 6px;
+}
+
+div.close-button:hover {
+	cursor: pointer;
+	background: #bbb;
+}
+div.close-button:hover svg {
+	fill: #fff;
+
+}
+
+div.pop-up-box div.close-button {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}

@@ -1,0 +1,379 @@
+ @expand-collapse-column-outer-width: 40px;
+ @id-column-outer-width: 60px;
+ @date-column-outer-width: 127px;
+
+ div.filtered-paginated-table-container {
+ /*------------------------------------------Filter boxes------------------------------------------------*/
+
+  div.subset-choices {
+    width: 100%;
+    float: left;
+  }
+
+  div.subset-choices > div {
+    float: left;
+    margin-right: 15px;
+  }
+
+  div.subset-choices > div.subset-choice {
+    float: left;
+    margin-right: 30px;
+  }
+
+  div.subset-choice > div.checkbox-label-container {
+    float: left;
+    margin-right: 4px;
+  }
+
+  div.subset-choices span.number-of-jobs {
+    float: left;
+    font-weight: 600;
+  }
+
+  div.filter-box {
+    margin-bottom: 20px;
+    float: left;
+    width: 500px;
+    max-width: 600px;
+    margin-bottom: 15px;
+  }
+
+  div.filter-box h4 {
+    margin: 0;
+  }
+
+  div.filter-box input {
+    float: left;
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  div.filter-box button.hide {
+    float: right;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+  }
+
+  div.filter-box div.checkbox-label-container {
+    float: left;
+    margin: 15px 15px 0 0;
+  }
+
+  div.filter-box div.date-filter-input-container {
+    float: left;
+  }
+
+  /*----------------------------Filtering feedback and clear filers button--------------------*/
+
+  div.filtering-results {
+    margin-top: 15px;
+  }
+
+  div.filtering-results p.jobs-returned {
+    font-size: 1.2em;
+    color: #777;
+    line-height: 32px;
+    float: left;
+    margin: 0;
+  }
+
+  div.filtering-results p.jobs-returned span.filter-button {
+    background-color: @hyrax-red-two;
+    float: left;
+    margin: 0 10px 0 0;
+    cursor: default;
+  }
+
+  div.filtering-results p.jobs-returned span svg {
+    height: 18px;
+    margin-top: 6px;
+    fill: #fff;
+  }
+
+  div.filtering-results button.clear-filters {
+    height: 30px;
+    float: right;
+    line-height: 30px;
+  }
+
+  /*----------------------------------Pagination controls-------------------------------------*/
+
+  div.table-pagination {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+  }
+
+  div.table-pagination input {
+    width: 50px;
+    height: 30px;
+    display: inline;
+    padding-left: 0px;
+    background-color: #aaa;
+    border-width: 0;
+    text-align: center;
+    text-indent: 0;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  div.table-pagination div.jobs-per-page {
+    float: left;
+  }
+
+  div.table-pagination div.jobs-per-page p {
+    float: left;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  div.table-pagination div.jobs-per-page input {
+    float: left;
+    margin: 0 8px 0 0;
+  }
+
+  div.table-pagination div.page-navigation {
+    float: right;
+  }
+
+  div.table-pagination div.page-navigation input {
+    float: none;
+  }
+
+  div.table-pagination div.page-navigation div.page-number-input {
+    float: left;
+    padding: 0 4px;
+  }
+
+  div.incrementing-arrow {
+    cursor: pointer;
+  }
+
+  div.incrementing-arrow svg {
+    fill: #bbb;
+  }
+
+  div.incrementing-arrow:hover svg {
+    fill: @admin-console-colour-three;
+  }
+
+  div.table-pagination div.page-navigation div.incrementing-arrow {
+    float: left;
+    margin-right: 5px;
+  }
+
+  div.table-pagination div.page-navigation div.incrementing-arrow:last-child {
+    margin: 0 0 0 5px;
+  }
+
+  div.table-pagination div.jobs-per-page div.arrows {
+    margin-right: 10px;
+    float: left;
+  }
+
+  div.table-pagination div.jobs-per-page div.arrows div.incrementing-arrow:first-child {
+    margin-bottom: 5px;
+  }
+
+  div.table-pagination div.jobs-per-page div.arrows div.incrementing-arrow {
+    width: 20px;
+  }
+
+  /*------------------------------------------Table element---------------------------------------*/
+
+
+
+  table {
+    margin-bottom: 0;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  thead {
+    width: 100%;
+  }
+
+  table.fixed-header {
+    margin-top: 50px;
+  }
+
+  table.fixed-header thead {
+    position: fixed;
+    top: @header-height;
+  }
+
+  table thead td.filter-boxes {
+    padding: 0;
+    height: auto;
+    border-top-width: 0;
+  }
+
+  /*---Table header cells - general---*/
+
+  table  th.filterable {
+    padding: 0 0 0 @table-cell-padding-left-right;
+    vertical-align: middle;
+    line-height: 50px;
+  }
+
+  /*---Filter buttons---*/
+
+  table th {
+    box-sizing: border-box;
+  }
+
+  span.filter-button {
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    margin: 10px 10px 10px 0px;
+    .border-radius(@radiusSize: 3px);
+  }
+
+  table th span.filter-button:hover {
+    cursor: pointer;
+  }
+  table th .open span.filter-button {
+    background-color: #999;
+  }
+
+  table th span.filter-button.active {
+    background-color: @hyrax-red-two;
+  }
+
+  table th span.filter-button svg {
+    fill: #fff;
+    max-height: 24px;
+    margin-top: 3px;
+  }
+
+  /*----------------------Table body cells - general--------------------*/
+
+  table td {
+    height: 20px;
+    line-height: 20px;
+    background: #fff;
+    box-sizing: border-box;
+  }
+
+  table tr:hover td {
+    background-color: @table-row-hover-background-color;
+    cursor: default;
+  }
+
+  table td a:hover {
+    text-decoration: none;
+    color: @body-content-link-color;
+  }
+
+  table td.not-applicable {
+    text-align: center;
+  }
+
+  table tr .thin {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  table tr th.thin {
+    text-align: center;
+  }
+
+  table td.overflow-ellipse {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /*------*/
+
+  th.expand-collapse,
+  td.expand-collapse {
+    width: @expand-collapse-column-outer-width;
+    max-width: @expand-collapse-column-outer-width;
+  }
+
+  td.expand-collapse {
+    padding-left: 13px;
+    padding-right: 13px;
+    fill: #777;
+  }
+
+  td.expand-collapse:hover {
+    cursor: pointer;
+    fill: @admin-console-colour-three;
+  }
+
+  tr.additional-info.collapsed {
+    display: none;
+  }
+
+  td.additional-info-icon {
+    vertical-align: top;
+    padding: 15px 5px 5px 5px;
+    width: 30px;
+    text-align: center;
+  }
+
+  td.additional-info-icon {
+    fill: #61c3d3;
+    border-right-width: 0;
+    svg {
+      width: 20px;
+    }
+  }
+
+  td.additional-info-content {
+    border-left-width: 0;
+    line-height: 180%;
+  }
+  th.id,
+  td.id {
+    width: @id-column-outer-width;
+    max-width: @id-column-outer-width;
+  }
+
+  td.id {
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center
+  }
+
+  /*------------*/
+  th.date-created,
+  td.date-created {
+   width: @date-column-outer-width;
+   max-width: @date-column-outer-width;
+  }
+
+  td.date-time {
+   padding-top: 0;
+   padding-bottom: 0;
+   line-height: 20px;
+  }
+
+  td.date-time span.time {
+   color: #999;
+  }
+
+  span.table-cell-icon {
+    .tick {
+      fill: lighten(@success-text-color, 10%);
+    }
+
+    .cross {
+      fill: @error-text-color;
+    }
+
+    .processing {
+      fill: lighten(@warning-text-color, 20%);
+    }
+
+    .lock {
+      fill: #666;
+    }
+  }
+}

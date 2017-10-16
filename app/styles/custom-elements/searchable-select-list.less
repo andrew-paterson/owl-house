@@ -1,0 +1,115 @@
+@searchable-select-list-width: 300px;
+@select-list-input-margin: 10px;
+.searchable-select-list {
+  width: @searchable-select-list-width;
+
+  input {
+    width: 100% !important;
+  }
+
+  div.select-box {
+    background-color: #eee;
+    color: @input-color;
+    border: @input-border-width @input-border-style @input-border-color;
+    border-radius: @input-border-radius;
+    -moz-border-radius: @input-border-radius;
+    -webkit-border-radius: @input-border-radius;
+    height: @input-height;
+    font-family: @input-font-family;
+    margin: 0;
+    width: @input-width;
+    float: @input-float;
+    text-indent: 8px;
+    box-sizing: border-box;
+    font-size: 1em;
+    float: left;
+  }
+
+  div.select-box:hover {
+    border-color: @input-hover-border-color;
+    cursor: pointer;
+  }
+
+  div.select-box.focused {
+    border-color: @input-focus-border-color;
+  }
+
+  div.select-box div.svg {
+    width: 20px;
+    float: left;
+    margin: 8px 10px 0 0;
+    fill: @input-border-color
+  }
+
+  div.select-box:hover div.svg {
+    fill: @input-hover-border-color
+  }
+
+   div.select-box.focused div.svg {
+    fill: @input-focus-border-color;
+  }
+
+  .list-dropdown {
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    .border-radius(@radiusSize: 3px);
+    .search-field-container {
+      padding: 10px;
+      .search-list-field {
+        margin: 0;
+        input,
+        input:hover,
+        input:focus {
+          background-color: @input-background-color;
+          border-color: @input-border-color;
+        }
+      }
+    }
+    .list-container {
+      max-height: 300px;
+    }
+
+    ul.list {
+      margin: 0;
+      li {
+        list-style: none;
+        margin: 0;
+        padding: 6px 15px;
+        color: #666;
+        font-weight: 600;
+        box-sizing: border-box;
+      }
+
+      li:hover {
+        background: #fff;
+        color: @body-content-link-color;
+        cursor: pointer;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      li:last-child:hover {
+        border-bottom-width: 0px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+}
+
+.valid div.select-box {
+  border-color: @input-valid-border-color;
+  background: @input-valid-background-color;
+}
+
+.invalid div.select-box {
+  border-color: @input-invalid-border-color;
+  background: @input-invalid-background-color;
+}
+
+.searchable-select-list.includes-select-all-option .list-dropdown li:first-child {
+  color: @body-content-link-color;
+}
+

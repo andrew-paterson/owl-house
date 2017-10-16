@@ -1,0 +1,664 @@
+.container-3 {
+	max-width: 100%;
+	width: 100%;
+	clear: both;
+	border-width: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container-2  {
+	// max-width: @pc-content-container-max-width;
+	padding: @pc-main-content-box-outer-padding-top @pc-page-gutter-left-right @pc-main-content-box-outer-padding-bottom;
+}
+
+.hidden {
+	display:none;
+}
+
+h1, h2, h3, h4 {
+	color: @page-header-color;
+	font-size: @page-header-font-size;
+	text-transform: @page-header-text-transform;
+	text-align: @page-header-text-align;
+	font-family: @page-header-font-family;
+	font-weight: @page-header-font-weight;
+	padding: @page-header-padding-top @pc-body-content-padding-left-right @page-header-padding-bottom;
+	background-color: @page-header-background-color;
+	line-height: @page-header-line-height;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+a,
+.fake-link,
+.body-content .fake-link {
+	color: @body-content-link-color;
+	text-decoration: @body-content-link-text-decoration;
+	border:none;
+    outline:none
+}
+
+a:hover,
+.fake-link:hover,
+.body-content .fake-link:hover {
+	color: @body-content-link-hover-color;
+	text-decoration: @body-content-link-hover-text-decoration;
+	cursor: pointer;
+}
+
+.body-content h1,
+.body-content h2,
+.body-content h3,
+.body-content h4 {
+	/*body-content-headers*/
+	color: @body-content-header-color;
+	text-transform: @body-content-header-text-transform;
+	text-align: @body-content-header-text-align;
+	font-family: @body-content-header-font-family;
+	font-weight: @body-content-header-font-weight;
+	margin-bottom: @body-content-header-margin-bottom;
+	font-style: @body-content-header-font-style;
+	line-height: 150%;
+	padding: 0;
+	background-color: transparent;
+
+}
+.body-content h1 {
+	font-size: @body-content-header-h1-font-size/@body-content-text-font-size;
+}
+.body-content h2 {
+	font-size: @body-content-header-h2-font-size/@body-content-text-font-size;
+}
+.body-content h3 {
+	font-size: @body-content-header-h3-font-size/@body-content-text-font-size;
+}
+.body-content h4 {
+	font-size: @body-content-header-h4-font-size/@body-content-text-font-size;
+}
+
+/*------------------------BODY CONTENT PARAGRAPH------------------------*/
+
+.body-content {
+	/*body-content-text*/
+	line-height: @body-content-text-line-height;
+	color: @body-content-text-color;
+	font-family: @main-font-family;
+	font-style: @body-content-text-font-style;
+	font-size: @body-content-text-font-size;
+	font-weight: @body-content-text-font-weight;
+	text-align: left;
+}
+
+.body-content p {
+	text-align: @body-content-paragraph-text-align;
+	line-height: @body-content-paragraph-line-height;
+	margin-bottom: @body-content-paragraph-space-after;
+}
+
+.body-content span.hyrax-red {
+	color: @hyrax-red-two;
+}
+
+.body-content .blue-text {
+	color: @admin-console-colour-three;
+}
+
+.blue-caps,
+.body-content .blue-caps {
+	text-transform: uppercase;
+	color: @admin-console-colour-three;
+}
+
+button,
+.button,
+.button input  {
+	background-color: @button-background-color;
+	height: @button-height;
+	border-width: 0;
+	.border-radius(@radiusSize:@button-border-radius);
+	text-align: center;
+	color: @button-color;
+	font-size: @button-font-size;
+	line-height: @button-line-height;
+	letter-spacing: @button-letter-spacing;
+	text-transform: @button-text-transform;
+	font-family: @button-font-family;
+	font-weight: @button-font-weight;
+	cursor: pointer;
+	display: block;
+	padding: 0;
+	box-sizing: border-box;
+	padding: 0 @button-side-padding;
+	//.box-shadow-bottom-right;
+}
+
+.submit-input-container.button {
+	padding: 0;
+}
+
+button.spin,
+.button.spin,
+.button.spin input  {
+	text-align: left;
+}
+
+.button input  {
+	background-color: transparent;
+}
+
+button.large,
+.button.large,
+.button.large input {
+	height: 50px;
+	width: 100%;
+	line-height: 52px;
+}
+
+button:hover,
+.button:hover {
+	background-color: @button-hover-background-color;
+	text-decoration: none;
+	color: @button-color;
+	cursor: pointer;
+}
+
+button:focus,
+.button:focus,
+.button input:focus {
+	outline: none;
+}
+
+button.flashing,
+.button.flashing {
+  animation: colorchange 3s infinite 1s;
+  -webkit-animation: colorchange 3s infinite 1s;
+}
+
+@keyframes colorchange {
+	0% {background-color: @admin-console-colour-three;}
+	50% {background-color: @hyrax-red-two;}
+	80% {background-color: @admin-console-colour-three;}
+}
+
+@-webkit-keyframes colorchange {
+  	0% {background-color: @admin-console-colour-three;}
+  	50% {background-color: @hyrax-red-two;}
+  	80% {background-color: @admin-console-colour-three;}
+}
+
+
+button.grey-button,
+.button.grey-button {
+	background-color: @grey-button-background-color;
+}
+
+button.grey-button:hover,
+.button.grey-button:hover {
+	background-color: @grey-button-hover-background-color;
+}
+
+button.hyrax-red,
+.button.hyrax-red {
+	background-color: @hyrax-red-two;
+}
+
+button.hyrax-red:hover,
+.button.hyrax-red:hover {
+	background-color: @hyrax-red-three;
+}
+
+button.hyrax-blue-button,
+.button.hyrax-blue-button {
+	background-color: @hyrax-blue-one;
+}
+
+button.hyrax-blue-button:hover,
+.button.hyrax-blue-button:hover  {
+	background-color: @hyrax-blue-two;
+}
+
+button.green-button,
+.button.green-button {
+	background-color: @success-background-color;
+}
+
+button.green-button:hover,
+.button.green-button:hover {
+	background-color: darken(@success-background-color, 10%);
+}
+
+button.disabled,
+.button.disabled,
+button.disabled:hover,
+.button.disabled:hover  {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+div.input-file-wrapper {
+	padding-top: 12px;
+	position: relative;
+	line-height: 18px;
+}
+
+div.input-file-wrapper input {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+div.input-file-wrapper input:hover {
+	cursor: pointer;
+}
+
+div.input-file-wrapper:hover  {
+	background-color: @admin-console-colour-four;
+}
+
+p.file-chosen,
+.body-content p.file-chosen {
+	margin-top: -3px;
+	float: left;
+}
+
+.body-content img {
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+/*---General styling for radio buttons and checkboxes---*/
+
+div.checkbox-label-container {
+	margin-bottom: 15px;
+}
+
+div.radio-checkbox-wrapper {
+	position: relative;
+	float: left;
+	margin: @radio-button-checkbox-margin-top 5px 0 0;
+}
+
+div.radio-checkbox-wrapper svg {
+	margin-top: 3px;
+	max-height: 10px;
+	fill: #fff;
+
+}
+
+div.radio-checkbox-wrapper div.svg path {
+	display: none;
+}
+
+div.radio-checkbox-wrapper input {
+	width: 20px;
+	height: 20px;
+	float: left;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+div.radio-checkbox-wrapper div.radio-checkbox-dummy {
+	float: left;
+	height: 20px;
+	width: 20px;
+	background: #fff;
+	border: @input-border-width @input-border-style @input-border-color;
+	box-sizing: border-box;
+	border-radius: @input-border-radius;
+	-moz-border-radius: @input-border-radius;
+	-webkit-border-radius: @input-border-radius;
+}
+
+input[type=radio],
+input[type=checkbox] {
+	margin: 0;
+}
+
+input[type=radio]:hover,
+input[type=checkbox]:hover,
+div.radio-checkbox-wrapper:hover {
+	cursor: pointer;
+}
+
+div.radio-checkbox-wrapper:hover div.radio-checkbox-dummy {
+	background-position: center -20px;
+	border-color: @input-hover-border-color;
+	background-color: @radio-checkbox-hover-background-color;
+}
+
+div.radio-checkbox-wrapper.checked div.radio-checkbox-dummy,
+input[type=radio]:checked + div.radio-checkbox-dummy,
+input[type=checkbox]:checked + div.radio-checkbox-dummy,
+div.radio-checkbox-wrapper.disabled.checked input[type=radio]:hover + div.radio-checkbox-dummy,
+div.radio-checkbox-wrapper.disabled.checked input[type=checkbox]:hover + div.radio-checkbox-dummy {
+	border-color: @input-hover-border-color;
+	background-color: @radio-checkbox-selected-background-color;
+}
+
+input[type=radio]:checked + div.radio-checkbox-dummy div.svg path.tick,
+input[type=checkbox]:checked + div.radio-checkbox-dummy div.svg path.tick,
+div.radio-checkbox-wrapper.checked div.radio-checkbox-dummy div.svg path.tick,
+div.radio-checkbox-wrapper.disabled.checked input[type=radio]:hover + div.radio-checkbox-dummy div.svg path.tick,
+div.radio-checkbox-wrapper.disabled.checked input[type=checkbox]:hover + div.radio-checkbox-dummy  div.svg path.tick {
+	display: block;
+}
+
+div.radio-checkbox-wrapper.disabled input[type=radio]:hover,
+div.radio-checkbox-wrapper.disabled input[type=checkbox]:hover {
+	cursor: not-allowed;
+}
+div.radio-checkbox-wrapper.disabled input[type=radio]:hover + div.radio-checkbox-dummy,
+div.radio-checkbox-wrapper.disabled input[type=checkbox]:hover + div.radio-checkbox-dummy {
+	border-color: @input-border-color;
+	background-color: transparent;
+}
+
+div.radio-checkbox-wrapper.disabled.unchecked,
+div.radio-checkbox-wrapper.disabled.unchecked + label {
+	display:none;
+}
+
+/*---General styling for tables---*/
+
+table {
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+
+}
+
+table th {
+	color: @table-header-cell-color;
+	background-color: @table-header-cell-background-color;
+	font-size: @table-header-cell-font-size/@body-content-text-font-size;
+	text-transform: @table-header-cell-text-transform;
+	text-align: @table-header-cell-text-align;
+	font-family: @table-header-cell-font-family;
+	font-weight: @table-header-cell-font-weight;
+	padding: @table-cell-padding-top @table-cell-padding-left-right @table-cell-padding-bottom;
+	border: 1px @table-border-style @table-header-cell-border-color;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	font-size: @table-header-cell-font-size/@body-content-text-font-size;
+	line-height: 100%;
+}
+
+table td {
+	color: @table-cell-color;
+	background-color: @table-cell-background-color;
+	font-family: @table-cell-font-family;
+	line-height: @table-cell-text-line-height;
+	padding: @table-cell-padding-top @table-cell-padding-left-right @table-cell-padding-bottom;
+	font-size: 1em;
+	border: 1px @table-border-style @table-border-color;
+}
+
+table td span.table-cell-icon {
+  float: left;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  display: block;
+}
+
+table td span.table-cell-icon svg {
+  height: 20px;
+}
+
+/*------------------------LINE-HEIGHT------------------------*/
+
+.body-content dd,
+.body-content dt,
+.body-content ul li,
+.body-content ol li  {
+	line-height: @body-content-text-line-height;
+}
+
+.body-content ul, .body-content ol {
+	margin-bottom: @body-content-paragraph-space-after;
+	padding: 0px;
+}
+
+.body-content ul ul,
+.body-content ul ol,
+.body-content ol ul,
+.body-content ol ol {
+	margin-bottom: 0;
+}
+
+.body-content ul li, .body-content ol li {
+	margin-left: 1em;
+	padding-left: 0.5em;
+	font-family: @main-font-family;
+}
+
+.body-content hr {
+	border-width: 0;
+	border-top: @body-content-hr-border-top-width solid @body-content-hr-border-top-color;
+	line-height: @body-content-text-line-height;
+	font-size: @body-content-text-font-size;
+}
+
+.clear,
+.clr {
+	clear: both;
+	line-height: 0;
+}
+
+.asterisk {
+	display: inline-block;
+	color: @general-asterisk-color;
+	font-size: @general-asterisk-font-size;
+	font-weight: @general-asterisk-font-weight;
+	line-height: @general-asterisk-line-height;
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+	bottom: @general-asterisk-baseline-shift;
+	margin-right: 3px;
+}
+
+/*---------------------------------------------------------------------------
+FOOTER STRIP TEXT STYLE OVERRIDES {CORRESPONDS TO "01-variables-bits-and-pieces.less"}
+---------------------------------------------------------------------------*/
+
+footer ul li {
+	line-height: @body-content-text-line-height;
+}
+
+.body-content p {
+	margin-top: 0;
+}
+
+.body-content label {
+	margin-bottom: 15px;
+}
+
+div.form-field-container {
+	margin-bottom: 15px;
+}
+
+sup {
+	font-size: 40%;
+	vertical-align:text-top;
+	line-height: 1;
+}
+
+div.form-element-container {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+div.form-element-container.radio {
+	width: auto;
+}
+
+div.form-element-container.radio label {
+	margin-right: 15px;
+}
+
+.body-content ul ul,
+.body-content ol ol {
+	margin-bottom: 0;
+}
+div.svg,
+svg {
+	width: 100%;
+	height: auto;
+	line-height: 0;
+}
+
+button div.svg,
+.button div.svg {
+	margin-right: @button-side-padding - 2px;
+	margin-top: -5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+button div.svg,
+button svg,
+.button div.svg,
+.button svg {
+	height: 20px;
+	width: auto;
+	fill: #fff;
+}
+
+button div.svg .tick {
+width: 22px;
+}
+
+button.large div.svg,
+button.large svg,
+.button.large div.svg,
+.button.large svg {
+	height: 30px;
+}
+
+div.svg.inline {
+	width: 20px;
+	display: inline-block;
+
+}
+
+div.wrapper.placeholders label.placeholder {
+	display: none;
+}
+
+div.form-container {
+	max-width: 500px;
+}
+
+div.plot-container.plotly div.modebar svg {
+	width: 1em;
+}
+
+img.border {
+	border: 1px solid #ccc;
+}
+
+.draggable-dropzone {
+	padding: 50px;
+	border: 5px dotted #aaa;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 15px;
+	background: #fff;
+	.box-shadow-bottom-right;
+}
+
+.draggable-dropzone span {
+	background-color: #aaa;
+	padding: 11px @button-side-padding;
+	color: @button-color;
+	font-size: @button-font-size;
+	line-height: @button-font-size;
+	letter-spacing: @button-letter-spacing;
+	text-transform: @button-text-transform;
+	font-family: @button-font-family;
+	font-weight: @button-font-weight;
+	border-radius: @button-border-radius;
+	-moz-border-radius: @button-border-radius;
+	-webkit-border-radius: @button-border-radius;
+}
+
+.draggable-dropzone.activated {
+	border-color: @hyrax-blue-one;
+	color: @hyrax-blue-one;
+	background-color: #f0f0f0;
+
+}
+
+.monospace {
+	font-family: "Lucida Console", Monaco, "Courier New", Courier, monospace;
+}
+
+div.incrementing-arrow.left-right {
+	height: 30px;
+	width: 13px;
+}
+
+div.incrementing-arrow.left-right svg {
+	height: 30px;
+}
+
+div.incrementing-arrow.up-down {
+	width: 30px;
+	height: 13px;
+}
+
+div.incrementing-arrow.up-down svg {
+	height: 13px;
+}
+
+div.in-page-alert {
+	button div.svg {
+		float: left;
+		width: auto;
+	}
+	div.ellipsis {
+		width: auto;
+		float: left;
+		svg {
+			width: auto;
+			float: left;
+			height: 10px;
+		}
+	}
+}
+
+div.block-notice {
+	margin-bottom: 25px;
+}
+//
+tr th div.table-pop-up {
+	display: none;
+	background-color: @info-background-color;
+	border: 1px solid @info-text-color;
+	position: absolute;
+	z-index: 2;
+	padding: 8px;
+	margin: 24px 0 0;
+	width: auto;
+	float: left;
+	color: #fff;
+	text-align: left;
+	max-width: 100%;
+}
+tr th.labelled:hover {
+	cursor: pointer;
+	background: @info-background-color;
+}
+tr th.labelled:hover div.table-pop-up {
+	display: block;
+}

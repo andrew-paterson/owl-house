@@ -1,0 +1,19 @@
+{{#if user.name}}
+	<div class="login-greeting right">
+
+		{{#custom-elements/css-popout-toggler popoutBoxName=userMenu}}
+  			<span class="user-image-container"><img src="{{user.avatar_url}}" class="user-image"/></span>
+  		{{/custom-elements/css-popout-toggler}}
+  		<div class='user-popout'>
+	  		{{#custom-elements/css-popout-box popoutBoxName=userMenu customClasses='box-arrow arrow-direction-up arrow-position-right exatype-blue'}}
+          <ul>
+              {{!-- <li>{{#link-to "edit-account"}}{{svg/icon-user}}Edit account{{/link-to}}</li> --}}
+              <li>{{svg/icon-user}}{{user.name}}</li>
+              <li class="user-google-account">{{svg/icon-google-g}}{{user.email}}</li>
+          </ul>
+			    {{#link-to 'logout' (query-params userInitiated=true)}}<button class="large logout">{{svg/icon-lock}}Logout</button>{{/link-to}}
+			    <div class="clr"></div>
+			{{/custom-elements/css-popout-box}}
+		</div>
+	</div>
+{{/if}}

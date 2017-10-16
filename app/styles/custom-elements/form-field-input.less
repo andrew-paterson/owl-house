@@ -1,0 +1,161 @@
+div.form-field {
+	margin-bottom: @input-margin-bottom;
+
+}
+
+div.form-field div.input-container {
+	position: relative;
+}
+
+div.form-field div.input-container > div.svg {
+	position: absolute;
+	width: 20px;
+	right: 10px;
+	top: 1px;
+}
+
+// Icon styling
+
+div.form-field.required div.input-container > div.svg svg {
+	fill: @admin-console-colour-two;
+	margin-top: 9px;
+}
+
+div.form-field.invalid div.input-container > div.svg svg {
+	fill: @input-invalid-border-color;
+	margin-top: 10px;
+}
+
+div.form-field.valid div.input-container > div.svg svg {
+	fill: @input-valid-border-color;
+	margin-top: 13px;
+}
+
+div.form-field div.input-container > div.svg svg.search {
+	fill: @input-border-color;
+	margin-top: 9px;
+}
+
+div.form-field.invalid {
+	margin-bottom: @input-margin-bottom - 23px;
+}
+
+div.form-field.radio-buttons {
+	margin: 15px 0;
+}
+
+div.form-field div.field-error {
+	color: #b34347;
+	font-weight: 600;
+	margin-left: 10px;
+	height: 23px;
+}
+
+div.field-error div.svg {
+	height: 100%;
+	width: 20px;
+	float: left;
+	fill: #b34347;
+}
+
+label,
+.label {
+	font-style: @body-content-text-font-style;
+	color: @body-content-form-label-color;
+	float: @body-content-form-label-float;
+	font-weight: @body-content-form-label-font-weight;
+	line-height: 150%;
+	font-family: @main-font-family;
+	text-align: left;
+}
+
+.label {
+	display: inline;
+}
+
+input,
+.input {
+	background-color: @input-background-color;
+	color: @input-color;
+	border: @input-border-width @input-border-style @input-border-color;
+	border-radius: @input-border-radius;
+	-moz-border-radius: @input-border-radius;
+	-webkit-border-radius: @input-border-radius;
+	height: @input-height;
+	font-family: @input-font-family;
+	margin: 0;
+	width: @input-width;
+	padding: @input-top-bottom-padding @input-side-padding;
+	float: @input-float;
+	text-indent: 8px;
+	box-sizing: border-box;
+	font-size: 1em;
+}
+
+.input {
+	padding-top: 6px;
+}
+
+textarea {
+	background-color: @input-background-color;
+	color: @input-color;
+	border: @input-border-width @input-border-style @input-border-color;
+	border-radius: @input-border-radius;
+	-moz-border-radius: @input-border-radius;
+	-webkit-border-radius: @input-border-radius;
+	font-family: @input-font-family;
+	margin-top: @input-margin-top;
+	margin-bottom: @input-margin-bottom;
+	width: @input-width;
+	padding: @input-top-bottom-padding @input-side-padding;
+	float: @input-float;
+	text-indent: 8px;
+	box-sizing: border-box;
+	font-size: 1em;
+}
+
+input:hover,
+textarea:hover {
+	border-color: @input-hover-border-color;
+}
+
+input:focus,
+textarea:focus {
+	border-color: @input-focus-border-color;
+	outline: none;
+}
+
+.form-field.readonly input,
+.form-field.disabled input  {
+	background-color: #e9e9e9;
+	cursor: not-allowed;
+}
+
+.valid input,
+.valid input:focus {
+	border-color: @input-valid-border-color;
+	background: @input-valid-background-color;
+}
+
+.invalid input,
+.invalid input:focus {
+	border-color: @input-invalid-border-color;
+	background: @input-invalid-background-color;
+}
+
+.warning input,
+.warning input:focus {
+	border-color: @input-warning-border-color;
+	background: @input-warning-background-color;
+}
+
+input.inline,
+input.inline {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	float: none;
+	margin-bottom: 0;
+}
+
+

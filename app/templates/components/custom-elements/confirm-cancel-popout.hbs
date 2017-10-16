@@ -1,0 +1,17 @@
+{{#custom-elements/css-popout-toggler popoutBoxName=popoutBoxName}}
+<button class="{{colorScheme}} {{'toggle-options'}}">{{mainButtonText}}</button>
+{{/custom-elements/css-popout-toggler}}
+{{#custom-elements/css-popout-box 
+	popoutBoxName=popoutBoxName 
+	customClasses=popoutBoxClasses
+	colorScheme=colorScheme
+	}}
+		{{#if message}}<p class='alert-text'>{{message}}</p>{{/if}}
+		{{yield}}
+		<div class="option-buttons">
+		    <button class="{{'confirm'}} {{colorScheme}}" {{action 'confirm'}}>Confirm</button>
+		    <button class="cancel grey-button" {{action 'closePopoutBox'}}>Cancel</button>
+		    <div class="clr"></div>
+		</div>
+{{/custom-elements/css-popout-box}}
+<div class="clr"></div>

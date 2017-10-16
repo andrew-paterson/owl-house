@@ -1,0 +1,11 @@
+{{#background/radio-checkbox-wrapper checked=checked disabled=disabled}}
+  	{{input 
+	  	type="checkbox" 
+	  	checked=checked 
+	  	disabled=disabled
+	  	name=name
+	  	required=required
+	  	tabindex=tabindex
+	  	click=(action "changedAction" value="target.checked")
+	}}
+{{/background/radio-checkbox-wrapper}}

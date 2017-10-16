@@ -1,0 +1,20 @@
+<label class="{{if usePlaceholder 'placeholder'}}">{{label}}</label>
+<div class="input-container">
+	{{input
+		placeholder=label
+		value=value
+		focus-out='focusOutAction'
+		focus-in='focusInAction'
+		autofocus=autofocus
+		type=type
+		key-up='keyUpAction'
+		readonly=readonly
+		disabled=disabled
+		usePlaceholder=usePlaceholder
+		hideValidationSuccess=hideValidationSuccess
+	}}
+{{component inputIcon}}
+</div>
+{{#if error}}
+	<div class='field-error'>{{svg/icon-curved-arrow-right}}{{error}}</div>
+{{/if}}

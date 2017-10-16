@@ -1,0 +1,146 @@
+/*---Loader---*/
+.invisible {
+  opacity: 0;
+}
+
+div.loading-graphics {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  margin-left: -130px;
+  margin-top: -130px;
+}
+
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+}
+
+.loader .exatype-logo-graphic {
+  height: 45%;
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -22.5%;
+  margin-left: -22.5%;
+}
+
+.circular {
+  height: 100%;
+  transform-origin: center center;
+  -webkit-animation: rotate 3s linear 0s infinite normal ;
+  animation: rotate 3s linear 0s infinite normal ;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.circular.two {
+	width: 87%;
+}
+
+.animate .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: butt;
+}
+
+.circular.one .path {
+  -webkit-animation: dash 1.5s ease-in-out infinite, light 6s ease-in-out infinite;
+	animation: dash 1.5s ease-in-out infinite, light 6s ease-in-out infinite;
+}
+
+.circular.two .path {
+  -webkit-animation: dash 1.5s ease-in-out infinite, dark 6s ease-in-out infinite;
+	animation: dash 1.5s ease-in-out infinite, dark 6s ease-in-out infinite;
+}
+
+
+@-webkit-keyframes rotate {
+  100%{
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100%{
+  transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes light {
+  0%, 25%, 51%, 75% {
+    stroke: @spinner-colour-two;
+  }
+  26%, 50%, 76%, 100% {
+    stroke: @spinner-colour-one;
+  }
+}
+
+@-webkit-keyframes light {
+  0%, 25%, 51%, 75% {
+    stroke: @spinner-colour-two;
+  }
+  26%, 50%, 76%, 100% {
+    stroke: @spinner-colour-one;
+  }
+}
+
+@keyframes dark {
+  0%, 25%, 51%, 75% {
+    stroke: @spinner-colour-one;
+  }
+  26%, 50%, 76%, 100% {
+    stroke: @spinner-colour-two;
+  }
+}
+
+@-webkit-keyframes dark {
+  0%, 25%, 51%, 75% {
+    stroke: @spinner-colour-one;
+  }
+  26%, 50%, 76%, 100% {
+    stroke: @spinner-colour-two;
+  }
+}
+

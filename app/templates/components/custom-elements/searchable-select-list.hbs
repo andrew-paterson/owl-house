@@ -1,0 +1,39 @@
+<label class="{{if usePlaceholder 'placeholder'}}">{{label}}</label>
+  <div class='input-container'>
+    <div class="{{'select-box input'}} {{if showSelectList 'focused'}}" {{action 'toggleList'}}>
+      {{svg/icon-arrow-down}}
+      {{displayValue}}
+    </div>
+     {{component inputIcon}}
+  </div>
+
+<div class="clr"></div>
+{{#if showSelectList}}
+  <div class="list-dropdown">
+    {{#if searchable}}
+      <div class="search-field-container">
+        {{custom-elements/form-field-input
+          value=inputValue
+          label="Search"
+          usePlaceholder=true
+          keyUpAction='filterSelectList'
+          focusInAction='focusIn'
+          focusOutAction='focusOut'
+          customClasses='search-list-field'
+          defaultInputIcon='svg/icon-search'
+        }}
+      </div>
+    {{/if}}
+    <div class="clr"></div>
+    {{#background/scrolling-div-vertical-scroll customClasses="list-container"}}
+      <ul class="list">
+        {{#each displayList as |item|}}
+          <li {{action 'setSearchItem' item on="mouseDown" preventDefault=false}}>{{item}}</li>
+        {{/each}}
+      </ul>
+    {{/background/scrolling-div-vertical-scroll}}
+  </div>
+{{/if}}
+{{#if error}}
+  <div class='field-error'>{{svg/icon-curved-arrow-right}}{{error}}</div>
+{{/if}}

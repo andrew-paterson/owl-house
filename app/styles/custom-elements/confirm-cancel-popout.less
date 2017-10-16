@@ -1,0 +1,52 @@
+div.confirm-cancel-container {
+	position: relative;
+	float: left;
+
+	button.toggle-options {
+		float: left;
+		margin-bottom: 15px;
+	}
+
+	div.pop-up-box {
+		position: absolute;
+		left: 0;
+		top: 55px;
+		width: 310px;
+		z-index: 1;
+	}
+
+	div.pop-up-box-inner div.option-buttons {
+		position: relative;
+		padding-right: 118px;
+
+	}
+
+	div.pop-up-box-inner div.close-button {
+		display: none;
+	}
+
+	div.pop-up-box-inner button.confirm {
+		width: 100%;
+	}
+
+	 div.pop-up-box-inner button.cancel {
+		position: absolute;
+		right: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+/*---overrides for right aligned box---*/
+
+div.confirm-cancel-container.right {
+	float: right;
+}
+
+div.confirm-cancel-container.right button.toggle-options {
+	float: right;
+}
+
+div.confirm-cancel-container.right div.pop-up-box {
+	left: inherit;
+	right: 0;
+}
