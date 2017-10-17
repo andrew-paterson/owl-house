@@ -1,15 +1,3 @@
-{{#if session.navCollapsed}}
-<div class='hamburger'  {{action 'toggleFullNav'}}>
-  <span class='hamburger-stripe'></span>
-  <span class='hamburger-stripe'></span>
-  <span class='hamburger-stripe'></span>
-</div>
-{{else}}
-<div class="close-nav" {{action 'toggleFullNav'}}>
-  {{svg/icon-cross}}
-</div>
-{{/if}}
-<div class="clr"></div>
 <ul>
 	<li>{{#link-to 'index' class='index'}}Home{{/link-to}}</li>
 </ul>

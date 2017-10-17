@@ -5,9 +5,5 @@ export default Ember.Component.extend({
   tagName: 'div',
 	classNames: ['wrapper', 'interface'],
 	classNameBindings: ['classes', 'session.navCollapsed:nav-collapsed'],
-  actions: {
-      toggleFullNav:function() {
-        this.toggleProperty('session.navCollapsed');
-      },
-    }
+
 });

@@ -1,6 +1,16 @@
-<div class="long-bedroom-hoverable">
-  <img src="/images/LongBedroomHDR.jpg" alt="" class='home-image'>
-  <div class="body-content">
-    {{layouts/home-read-more-box artefactMetaTitle='windmill' thumbnail='windmill_c_1.jpg'}}
+{{#layouts/private/outer-wrapper class="home"}}
+<div class="home-wrapper">
+  <h1>Home</h1>
+    <div class="body-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias eos adipisci amet consequuntur nesciunt illum vitae cupiditate repudiandae omnis, distinctio facere. Doloribus similique, beatae quisquam laborum est facilis. Atque, similique.</p>
+    </div>
+  <div class="long-bedroom-hoverable">
+    <img src="/images/LongBedroomHDR.jpg" alt="" class='home-image'>
+    <div class="body-content">
+      {{#each contentMap.artefacts as | artefact |}}
+        {{layouts/home-read-more-box artefact=artefact}}
+      {{/each}}
+    </div>
   </div>
 </div>
+{{/layouts/private/outer-wrapper}}

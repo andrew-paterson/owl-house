@@ -5,10 +5,4 @@ export default Ember.Component.extend({
 	tagName: 'div',
 	classNames: ['nav-sidebar'],
 	classNameBindings: ['session.navCollapsed:nav-collapsed'],
-
-	actions: {
-      toggleFullNav:function() {
-        this.toggleProperty('session.navCollapsed');
-      },
-  	}
 });

@@ -1,8 +1,11 @@
-{{!-- <div class="logo-container">
-	{{#link-to 'index'}}{{svg/admin-logo-horizontal}}{{/link-to}}
-</div> --}}
-{{!-- {{#if authenticated}}
-	{{layouts/private/user-greeting user=user}}
-{{/if}} --}}
-{{#if systemMessage}}{{layouts/system-message systemMessage=systemMessage}}{{/if}}
-<div class= "clr"></div>
+{{#if session.navCollapsed}}
+  <div class='hamburger'  {{action 'toggleFullNav'}}>
+    <span class='hamburger-stripe'></span>
+    <span class='hamburger-stripe'></span>
+    <span class='hamburger-stripe'></span>
+  </div>
+{{else}}
+  <div class="close-nav" {{action 'toggleFullNav'}}>
+    {{svg/icon-cross}}
+  </div>
+{{/if}}

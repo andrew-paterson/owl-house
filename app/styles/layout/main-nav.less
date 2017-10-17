@@ -1,6 +1,6 @@
 @sidebar-nav-item-height: 50px;
 @sidebar-expanded-width: 100%;
-@sidebar-collapsed-width: 50px;
+@sidebar-collapsed-width: 0px;
 @sidebar-toggle-transition: all 0.3s ease-in-out;
 @sidebar-toggle-menu-list-item-height: 54px;
 
@@ -9,7 +9,7 @@
 div.nav-sidebar {
 	position: fixed;
 	left: 0;
-	top: 0;
+	top: @header-height;
 	z-index: 9999999;
 	width: @sidebar-expanded-width;
 	overflow: hidden;
@@ -48,42 +48,27 @@ div.nav-sidebar ul li {
 }
 
 /*---Hamburger menu icon---*/
-div.nav-sidebar div.close-nav,
-div.nav-sidebar div.hamburger {
+div.close-nav,
+div.hamburger {
 	float: left;
 	margin: 26px 20px 0;
 	cursor: pointer;
-
 }
 
-div.nav-sidebar div.close-nav {
+div.close-nav {
 	width: 26px;
-	fill: #bbb;
+	fill: #333;
 }
 
-div.nav-sidebar span.hamburger-stripe {
+span.hamburger-stripe {
 	height: 3px;
 	width: 30px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-	background: #fff;
+  -webkit-border-radius: 2px;
+	background: #333;
 	margin: 0 0 4px 0;
 	display: block;
-}
-
-
-
-div.nav-sidebar.nav-collapsed span.hamburger-stripe {
-	background: #333;
-	}
-
-div.nav-sidebar div.nav-collapse {
-	float: right;
-	margin: 17px 15px 0 0;
-	height: 22px;
-	width: 30px;
-	fill: #fff;
 }
 
 /*---Main nav links---*/
@@ -102,13 +87,11 @@ div.nav-sidebar a {
 
 div.nav-sidebar a:hover  {
 	background-color: #666;
+	curdor: pointer;
 }
 
 div.nav-sidebar a.active {
-	background-color: #777;
-	color: #fff;
 	cursor: default;
-	border-top-color: #777;
 }
 
 /*---Main nav link icons---*/
@@ -128,41 +111,4 @@ div.nav-sidebar a div.svg svg {
 	margin-top: 10px;
 }
 
-div.nav-sidebar a div.svg.dashboard svg {
-	height: 26px;
-	margin-top: 11px;
-}
-
-div.nav-sidebar a div.svg.create-job svg circle {
-	fill: #999;
-}
-
-div.nav-sidebar a div.svg.view-jobs svg rect.middle {
-	fill: #e7e8e8;
-}
-
-div.nav-sidebar a div.svg.view-jobs svg rect.right {
-	fill: #cdcccc;
-}
-
-div.nav-sidebar a div.svg.view-jobs svg rect.right {
-	fill: #cdcccc;
-}
-
-div.nav-sidebar a div.svg.faq svg {
-	height: 36px;
-	margin-top: 6px;
-}
-
-/*---When navigation is frozen---*/
-
-.nav-frozen div.nav-sidebar {
-
-}
-
-.nav-frozen div.nav-sidebar a {
-	background: transparent !important;
-	opacity: 0.3;
-	cursor: not-allowed;
-}
 
