@@ -6,6 +6,7 @@
   }
   .long-bedroom-hoverable {
     position: relative;
+    margin-bottom: 30px;
     .home-image {
       display: block;
       width: 100%;
@@ -33,10 +34,11 @@
     .toggle-button {
       display: block;
       position: absolute;
+      border: 2px solid #fff;
     }
 
     .toggle-button:hover {
-      border: 2px solid #fff;
+      border: 2px solid #ff00cc;
       cursor: pointer;
     }
 
@@ -257,8 +259,73 @@
       left: 58.4%;
       top: 63.2%;
     }
+  }
+  h2.gallery-header {
+    .box-shadow-bottom-inset;
+  }
+  .gallery-container {
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 200px;
+    .box-shadow-bottom;
+    .gallery-container-inner {
+      width: 10000000px;
+    }
+
+    .gallery-item {
+      position: relative;
+      float: left;
+      // border: 1px solid #eee;
+      // border-right-width: 0;
+      a {
+        display: block;
+      }
+       img.thumbnail {
+        height: 400px;
+        width: auto;
+        display: block;
+      }
+
+      h3 {
+        display: none;
+        font-size: 2em;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        padding-top: 1.5em;
+      }
+    }
+    .gallery-item:hover h3 {
+      display: block;
+    }
+// div.gallery-item:hover {
+//    z-index: 9999999;
+//   position: relative;
+// }
+
+// div.gallery-item:hover:before {
+//     box-shadow: -5px 0 5px -5px inset;
+//     content: " ";
+//     height: 100%;
+//     left: -5px;
+//     position: absolute;
+//     top: 0;
+//     width: 5px;
+// }
+// div.gallery-item:hover:after {
+//     box-shadow: 5px 0 5px -5px inset;
+//     content: " ";
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     right: -5px;
+//     width: 5px;
+// }
+
 
 
   }
-
 }

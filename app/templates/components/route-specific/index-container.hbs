@@ -12,5 +12,13 @@
       {{/each}}
     </div>
   </div>
+  <h2 class="gallery-header">Artefacts out of context</h2>
+  <div class="gallery-container">
+    <div class="gallery-container-inner">
+      {{#each contentMap.artefacts as |artefact| }}
+        {{layouts/thumbnail-gallery-item artefact=artefact}}
+      {{/each}}
+    </div>
+  </div>
 </div>
 {{/layouts/private/outer-wrapper}}

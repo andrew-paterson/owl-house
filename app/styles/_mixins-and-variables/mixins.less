@@ -23,15 +23,27 @@
 }
 
 .box-shadow-left-inset(@opacity: 0.16) {
-	box-shadow: inset 10px 0px 6px -6px rgba(0,0,0,@opacity);
-	-moz-box-shadow: inset 10px 0px 6px -6px rgba(0,0,0,@opacity);
-	-webkit-box-shadow: inset 10px 0px 6px -6px rgba(0,0,0,@opacity);
+	-webkit-box-shadow: inset 3px 0px 6px 0px rgba(0,0,0,@opacity);
+	-moz-box-shadow: inset 3px 0px 6px 0px rgba(0,0,0,@opacity);
+	box-shadow: inset 3px 0px 6px 0px rgba(0,0,0,@opacity);
+}
+
+.box-shadow-right-inset(@opacity: 0.16) {
+	-webkit-box-shadow: inset -3px 0px 6px 0px rgba(0,0,0,@opacity);
+	-moz-box-shadow: inset -3px 0px 6px 0px rgba(0,0,0,@opacity);
+	box-shadow: inset -3px 0px 6px 0px rgba(0,0,0,@opacity);
 }
 
 .box-shadow-top-inset(@opacity: 0.16) {
 	box-shadow: inset 0px 3px 5px rgba(0,0,0,@opacity);
 	-moz-box-shadow: inset 0px 3px 5px rgba(0,0,0,@opacity);
 	-webkit-box-shadow: inset 0px 3px 5px rgba(0,0,0,@opacity);
+}
+
+.box-shadow-bottom-inset(@opacity: 0.16) {
+	-webkit-box-shadow: inset 0px -3px 5px 0px rgba(0,0,0,@opacity);
+	-moz-box-shadow: inset 0px -3px 5px 0px rgba(0,0,0,@opacity);
+	box-shadow: inset 0px -3px 5px 0px rgba(0,0,0,@opacity);
 }
 
 .box-shadow-bottom-right(@opacity: 0.16) {

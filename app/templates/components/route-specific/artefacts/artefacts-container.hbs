@@ -1,5 +1,8 @@
 {{#layouts/private/outer-wrapper class="artefact-full"}}
   {{#layouts/content-wrapper title=title}}
     {{component artefactContent}}
+    {{#each artefactImagePaths as |imagePath| }}
+      <img src={{imagePath}} alt={{imagePath}}>
+    {{/each}}
   {{/layouts/content-wrapper}}
 {{/layouts/private/outer-wrapper}}
