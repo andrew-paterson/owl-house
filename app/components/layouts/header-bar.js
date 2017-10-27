@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   session: Ember.inject.service(),
   actions: {
     toggleFullNav:function() {
-      console.log('test');
+      window.scrollTo(0,0);
       this.toggleProperty('session.navCollapsed');
     },
   }

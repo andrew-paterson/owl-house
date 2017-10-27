@@ -10,4 +10,5 @@ export default Ember.Service.extend({
 	user: {},
 	passwordConfirmation: '',
 	userUiState: {},
+  readMorePopUpCurrentZIndex: 2,
 });

@@ -7,13 +7,13 @@
 /*---Nav sidebar as a whole---*/
 
 div.nav-sidebar {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: @header-height;
-	z-index: 9999999999999999999999;
+	z-index: 9;
 	width: @sidebar-expanded-width;
 	background: #333;
-	height: 100%;
+	padding: 20px 0;
 }
 
 div.nav-sidebar.nav-collapsed  {
@@ -26,9 +26,7 @@ div.nav-sidebar.nav-collapsed  {
 // }
 
 div.nav-sidebar ul {
-	float: left;
 	padding: 0;
-	margin: 20px 0 0;
 	list-style: none;
 }
 
@@ -42,8 +40,21 @@ div.nav-sidebar.nav-collapsed ul {
 div.nav-sidebar ul li {
 	margin: 0;
 	list-style: none;
-	height: @sidebar-nav-item-height;
-	min-width: 300px;
+	font-size: 3em;
+	color: #888;
+	clear: both;
+}
+
+div.nav-sidebar ul li span.text-separator {
+	padding-left: 40px;
+}
+
+div.nav-sidebar ul ul {
+	margin-top: 0;
+}
+
+div.nav-sidebar ul ul li {
+	font-size: 1em;
 }
 
 /*---Hamburger menu icon---*/
@@ -75,13 +86,16 @@ span.hamburger-stripe {
 div.nav-sidebar a {
 	display: block;
 	text-decoration: none;
-	font-size: 3em;
 	color: #fff;
-	float: left;
+	font-size: 1em;
 	width: 100%;
-	padding-left: 20px;
-	font-weight: 600;
+	padding-left: 40px;
 	line-height: @sidebar-nav-item-height;
+	max-width: 400px;
+}
+
+div.nav-sidebar li li a {
+	padding-left: 80px;
 }
 
 div.nav-sidebar a:hover  {

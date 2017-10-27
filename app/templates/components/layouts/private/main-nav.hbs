@@ -1,3 +1,13 @@
-<ul>
-	<li>{{#link-to 'index' class='index'}}Home{{/link-to}}</li>
-</ul>
+<div class="main-nav-inner">
+  <ul>
+  	<li>{{#link-to 'index' class='index'}}Home{{/link-to}}</li>
+    <li><span class='text-separator'>Artefacts</span>
+      <ul>
+        {{#each artefacts as |artefact| }}
+          <li {{action 'hideNav'}}>{{#link-to 'artefacts' (query-params artefact=artefact.metaTitle)}}{{artefact.title}}{{/link-to}}</li>
+        {{/each}}
+      </ul>
+    </li>
+  </ul>
+  <div class="clr"></div>
+</div>

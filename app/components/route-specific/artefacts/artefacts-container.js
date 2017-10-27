@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   contentMap: Ember.inject.service(),
 
+  didInsertElement: function() {
+    window.scrollTo(0,0);
+  },
+
   thisArtefactMetaData: function() {
     var currentArtefact = this.get('contentMap.artefacts').findBy('metaTitle', this.get('artefact'))
     return currentArtefact;
@@ -31,8 +35,6 @@ export default Ember.Component.extend({
     // Find the highest id in the content map
     var ids = this.get('contentMap.artefacts').getEach('id');
     var highestId = (ids.sort(function(a, b){return b-a}))[0];
-    console.log(thisArtefactMetaData.id);
-    console.log(this.get('contentMap.artefacts').findBy('id', thisArtefactMetaData.id - 1));
     var nextArtefact = thisArtefactMetaData.id < highestId ? (this.get('contentMap.artefacts').findBy('id', thisArtefactMetaData.id + 1)).metaTitle : null;
     var prevArtefact = thisArtefactMetaData.id > 1 ? (this.get('contentMap.artefacts').findBy('id', thisArtefactMetaData.id - 1)).metaTitle : null;
     return {

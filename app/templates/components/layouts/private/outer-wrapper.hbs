@@ -1,6 +1,25 @@
 {{layouts/header-bar}}
-{{layouts/private/main-nav}}
-<div id= "main-content-strip" class="{{'container-3'}}">
-	{{yield}}
+<div class="inner-wrapper">
+  {{#unless session.navCollapsed}}
+    {{layouts/private/main-nav}}
+  {{else}}
+    <div id= "main-content-strip" class="{{'container-3'}}">
+    	{{yield}}
+    </div>
+  {{/unless}}
 </div>
-
+<div class="container-3" id="bibliography">
+  <div class="container-2">
+    <div class="container-1">
+      <h2>Bibliography</h2>
+      <div class="body-content">
+        <ul>
+          <li>Emslie, A. 1997. A Journey Through the Owl House. Johannesburg: Penguin Books. </li>
+          <li>Ross, S.I. 1997. This is My World: The life of Helen Martins, creator of the Owl House. Cape Town: Oxford University Press.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clr"></div>
+{{layouts/footer-strip}}

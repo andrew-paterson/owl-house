@@ -1,7 +1,7 @@
-{{custom-elements/css-popout-toggler popoutBoxName=windmill class=artefact.metaTitle}}
-{{#custom-elements/css-popout-box popoutBoxName=windmill class=artefact.metaTitle}}
-  <h3>{{artefact.title}}</h3>
-  <img src="{{thumbnailPath}}" alt="{{artefact.title}}" class="artefact-thumbnail">
+<div {{action 'setzIndex'}}>{{custom-elements/css-popout-toggler popoutBoxName=contextualPopup class=artefact.metaTitle}}</div>
+{{#custom-elements/css-popout-box popoutBoxName=contextualPopup class=artefact.metaTitle}}
+    <h3>{{artefact.title}}</h3>
+    <img src="{{thumbnailPath}}" alt="{{artefact.title}}" class="artefact-thumbnail">
   <div class="clr"></div>
   {{yield}}
   {{#link-to 'artefacts' (query-params artefact=artefact.metaTitle) class='read-more'}}Read more{{/link-to}}

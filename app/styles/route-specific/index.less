@@ -11,9 +11,8 @@
       display: block;
       width: 100%;
     }
-
     .pop-up-box-inner {
-      background: #222;
+      background: transparent url("/images/black-overlay.png");
       h3 {
         font-family: 'Nunito sans';
         color: #fff;
@@ -35,6 +34,7 @@
       display: block;
       position: absolute;
       border: 2px solid #fff;
+      z-index: 1;
     }
 
     .toggle-button:hover {
@@ -49,6 +49,7 @@
     .pop-up-box {
       position: absolute;
       .box-shadow-bottom-right;
+      z-index: 2;
     }
 
     .pop-up-box img.artefact-thumbnail {
@@ -266,7 +267,6 @@
   .gallery-container {
     width: 100%;
     overflow-x: scroll;
-    margin-bottom: 200px;
     .box-shadow-bottom;
     .gallery-container-inner {
       width: 10000000px;
@@ -286,20 +286,31 @@
         display: block;
       }
 
-      h3 {
+      .overlay {
         display: none;
-        font-size: 2em;
         position: absolute;
         bottom: 0;
         width: 100%;
         background: #000;
-        color: #fff;
-        opacity: 0.7;
-        padding-top: 1.5em;
+        height: 100%;
+        opacity: 0.8;
+        h3 {
+          color: #fff;
+          display: table-cell;
+          vertical-align: middle;
+          height: 400px;
+          font-size: 3em;
+          font-family: @main-font-family;
+          text-transform: none;
+          font-weight: 400;
+          // line-height: 100%;
+          padding: 0;
+        }
       }
     }
-    .gallery-item:hover h3 {
-      display: block;
+    .gallery-item:hover .overlay {
+      display: table;
+      // display: block;
     }
 // div.gallery-item:hover {
 //    z-index: 9999999;

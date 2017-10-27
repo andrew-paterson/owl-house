@@ -1,5 +1,9 @@
 {{#link-to 'artefacts' (query-params artefact=artefact.metaTitle) class='read-more'}}
-  <img src="{{imagePath}}" alt="{{artefact.title}}" class="thumbnail">
-   <h3 class="artefact-title">{{artefact.title}}</h3>
+  <div {{action 'scrollToTop'}}>
+    <img src="{{imagePath}}" alt="{{artefact.title}}" class="thumbnail">
+    <div class="overlay">
+      <h3 class="artefact-title">{{artefact.title}}</h3>
+    </div>
+  </div>
 {{/link-to}}
 
