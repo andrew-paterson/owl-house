@@ -1,8 +1,26 @@
 {{#layouts/private/outer-wrapper class="artefact-full"}}
+  <div class="pagination header">
+    {{#if paginationLinks.prev}}
+      <div class='paginate prev' {{action 'scrollToTop'}}>{{link-to 'Prev' (query-params artefact=paginationLinks.prev)}}</div>
+    {{/if}}
+    {{#if paginationLinks.next}}
+      <div class='paginate next' {{action 'scrollToTop'}}>{{link-to 'Next' (query-params artefact=paginationLinks.next)}}</div>
+    {{/if}}
+  </div>
   {{#layouts/content-wrapper title=title}}
     {{component artefactContent}}
-    {{#each artefactImagePaths as |imagePath| }}
-      <img src={{imagePath}} alt={{imagePath}}>
-    {{/each}}
+    <div class="artefact-images">
+      {{#each artefactImagePaths as |imagePath| }}
+        <img src={{imagePath}} alt={{imagePath}}>
+      {{/each}}
+    </div>
+    <div class="pagination footer">
+    {{#if paginationLinks.prev}}
+      <div class='paginate prev' {{action 'scrollToTop'}}>{{link-to 'Prev' (query-params artefact=paginationLinks.prev)}}</div>
+    {{/if}}
+    {{#if paginationLinks.next}}
+      <div class='paginate next' {{action 'scrollToTop'}}>{{link-to 'Next' (query-params artefact=paginationLinks.next)}}</div>
+    {{/if}}
+  </div>
   {{/layouts/content-wrapper}}
 {{/layouts/private/outer-wrapper}}
