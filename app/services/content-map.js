@@ -5,7 +5,7 @@ export default Ember.Service.extend({
     {
       id: 1,
       metaTitle:'badge',
-      title: 'Badge',
+      title: 'Montevideo Souvenir',
       materials: null,
       dimensions: 'L: 115; W: 86; D: 3',
       contentImageSuffixes: ['s_1', 'c_1', 'c_2']
@@ -33,7 +33,7 @@ export default Ember.Service.extend({
     }, {
       id: 5,
       metaTitle: 'hide',
-      title: 'Hide',
+      title: 'Springbok Hide',
       materials: 'Springbok hide',
       dimensions: 'L: 730; W: 480; D: 3',
       contentImageSuffixes: ['s_1', 'c_1', 'c_2']
@@ -48,14 +48,14 @@ export default Ember.Service.extend({
     }, {
       id: 7,
       metaTitle: 'iconography',
-      title: 'Iconography',
+      title: 'Christian Iconography',
       materials: 'Framed postcard',
       dimensions: 'L: 155; W: 106; D: 8',
       contentImageSuffixes: ['s_1', 's_2', 'c_1', 'c_2']
     }, {
       id: 8,
       metaTitle: 'jug',
-      title: 'Jug',
+      title: 'Enamel Jug',
       materials: 'Painted enamel',
       dimensions: 'L: 321; W: 255; D: 165',
       contentImageSuffixes: ['s_1', 'c_1']
@@ -63,7 +63,7 @@ export default Ember.Service.extend({
       id: 9,
       metaTitle: 'mermaid',
       title: 'Mermaid',
-      materials: null,
+      materials: 'Plaster of Paris',
       dimensions: 'L: 74; W: 59; D: 61',
       contentImageSuffixes: ['s_1', 'c_1']
     }, {
@@ -76,7 +76,7 @@ export default Ember.Service.extend({
     }, {
      id: 11,
       metaTitle:'nude',
-      title: 'Nude',
+      title: 'Nude Print',
       materials: null,
       dimensions: 'L: 291; W: 213; D: 11',
       contentImageSuffixes: ['s_1', 's_2', 'c_1']
@@ -98,7 +98,7 @@ export default Ember.Service.extend({
     }, {
       id: 14,
       metaTitle: 'shell',
-      title: 'Shell',
+      title: 'Oyster Shell',
       materials: null,
       dimensions: 'L: 55; W: 31; D: 19',
       contentImageSuffixes: ['s_1', 's_2', 'c_1']
@@ -127,8 +127,8 @@ export default Ember.Service.extend({
     }, {
       id: 18,
       metaTitle: 'windchime',
-      title: 'Windchime',
-      materials: 'Stainless silver',
+      title: 'Wind Chime',
+      materials: 'Sterling silver',
       dimensions: 'L: 73; W: 30; D: 30',
       contentImageSuffixes: ['s_1', 'c_1', 'c_2', 'c_3']
     }, {

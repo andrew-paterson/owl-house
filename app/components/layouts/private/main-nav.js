@@ -13,6 +13,7 @@ export default Ember.Component.extend({
 
   actions: {
     hideNav: function() {
+      console.log('test');
       window.scrollTo(0,0);
       this.set('session.navCollapsed', true);
     }
