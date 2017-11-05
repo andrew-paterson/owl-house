@@ -9,5 +9,12 @@ export default Ember.Component.extend({
         this.set('customEndpoint', localStorage.getItem('hyrax.admin_api.apiEndpoint'));
       }
     });
+  },
+
+  actions: {
+    logout: function() {
+      console.log('logout');
+      this.sendAction('logout');
+    }
   }
 });
