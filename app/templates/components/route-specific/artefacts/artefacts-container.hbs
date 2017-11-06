@@ -8,6 +8,8 @@
     {{/if}}
   </div>
   {{#layouts/content-wrapper title=title}}
+    <p><b>Dimensions:</b> {{thisArtefactMetaData.dimensions}}</p>
+    <p><b>Materials:</b> {{thisArtefactMetaData.materials}}</p>
     {{component artefactContent}}
     <div class="artefact-images">
       {{#each artefactImagePaths as |imagePath| }}

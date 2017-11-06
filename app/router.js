@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('index', {path: '/'});
   this.route('artefacts');
+  this.route('the-long-bedroom-collection');
 });
 
 export default Router;
